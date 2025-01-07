@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    input {
+      font-size: 80px;
+      text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
+        1px 1px 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, 0 2px 0 #000000,
+        0 -2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000,
+        -2px 2px 0 #000000, 2px 2px 0 #000000, -3px 0 0 #000000,
+        3px 0 0 #000000, 0 3px 0 #000000, 0 -3px 0 #000000;
+    }
+    .rbutton{
+	    border: none;
+	    background-color: transparent;
+    }
+   li::marker{color:#181818;} 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: left
+}
+.grid{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: row;
+flex-wrap: nowrap;
+row-gap: 0.25rem;
+column-gap: 3rem;
+}
+.item{
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+align-items: center;
+row-gap: 0rem;
+background-color: black;
+}
+.item:hover{
+	background-color:313130;
+}
+
+.item-text{
+	display: flex;
+	border-radius: 10px;
+	background-color: black;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: white;
+	text-decoration: none;
+
+}
+.item-text:hover{
+	background-color: #313130;
+	color: #cd6ceb;
+}
+.nav-text{
+	padding-left: 750px;
+}
+#navbar{
+position: sticky;
+background-color: #181818;
+top: 0;
+overflow: hidden;
+border-bottom: 2px solid #313130;
+}
+.display{
+border-radius: 10px;
+padding: 0px;
+}
+.display:hover{
+opacity:0.75;
+transform: translatey(0px);
+animation: float 1s ease-in-out infinite;
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50%{
+		transform: translatey(-5px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+  </style>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/jpg" href="/maifavicon.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Mai Content</title>
+</head>
+
+<body>
+<div id="navbar">
+<div class = "container">
+  <ul>
+    <li>
+      <a href="index.html">
+        <button class="rbutton">
+		<img style="float: left;"
+            src="/mai_copy.png" />
+        </button>
+      </a>
+    </li>
+  </ul>
+<h3 class="nav-text"></h3>
+</div>
+</div>
+<br>
+<div class="grid">
+<div class = "item">
+     <a href="GH.html">
+        <button class="rbutton">
+		<img class="display"
+            src="/GH_poster.jpg" />
+        </button>
+     <div class="item-text">
+	     <a href="GH.html" style="color:inherit; text-decoration:none;">Giji Harem</a></div>
+</div>
+<div class="grid">
+<div class = "item">
+     <a href="index_copy.html">
+        <button class="rbutton">
+		<img class="display"
+            src="/GH_poster.jpg" />
+        </button>
+     <div class="item-text">
+	     <a href="GH.html" style="color:inherit; text-decoration:none;">Giji Harem</a></div>
+</div>
+
+<div class = "item">
+<img src="/GH_poster.jpg" class="display">
+<div class="item-text">
+Giji Harem</div>
+</div>
+</div>
+<!--
+   <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHH.html';"/>  
+          <br> 
+ <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHHHHH.html';"/>
+          <br>
+ <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHHHHH.html';"/>
+          <br>
+ <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHHHHH.html';"/>
+          <br>
+ <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHHHHH.html';"/>
+          <br>
+ <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHHHHH.html';"/>
+          <br>
+ <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHHHHH.html';"/>
+          <br>
+ <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHHHHH.html';"/>
+          <br>
+-->
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

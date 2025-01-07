@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    input {
+      font-size: 80px;
+      text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
+        1px 1px 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, 0 2px 0 #000000,
+        0 -2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000,
+        -2px 2px 0 #000000, 2px 2px 0 #000000, -3px 0 0 #000000,
+        3px 0 0 #000000, 0 3px 0 #000000, 0 -3px 0 #000000;
+    }
+    .rbutton{
+	    border: none;
+	    background-color: transparent;
+    }
+   li::marker{color:#181818;} 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: left
+}
+.grid{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column; 
+row-gap: 1rem;
+column-gap: 1rem;
+}
+.nav-text{
+	padding-left: 100px;
+}
+#navbar{
+position: sticky;
+background-color: #181818;
+top: 0;
+overflow: hidden;
+border-bottom: 2px solid #313130;
+}
+.display{
+border-radius: 10px;
+}
+.display:hover{
+opacity:0.75;
+transform: translatey(0px);
+animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50%{
+		transform: translatey(-5px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+  </style>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/jpg" href="/maifavicon.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Mai Content</title>
+</head>
+
+<body>
+<div id="navbar">
+<div class = "container">
+  <ul>
+    <li>
+      <a href="index.html">
+        <button class="rbutton">
+		<img style="float: left;"
+            src="/mai_copy.png" />
+        </button>
+      </a>
+    </li>
+  </ul>
+<h3 class="nav-text">nav text</h3>
+</div>
+</div>
+<br>
+<div class="grid">
+<div class = "display">
+<img src="/GH_poster.jpg">
+Giji Harem</div>
+</div>
+   <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHH.html';"/>  
+          <br> 
+ <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHHHHH.html';"/>
+          <br>
+ <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHHHHH.html';"/>
+          <br>
+ <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHHHHH.html';"/>
+          <br>
+ <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHHHHH.html';"/>
+          <br>
+ <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHHHHH.html';"/>
+          <br>
+ <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHHHHH.html';"/>
+          <br>
+ <div class="internal-space"><input type="submit" value="test" onclick="window.location='/GHHHHHH.html';"/>
+          <br>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

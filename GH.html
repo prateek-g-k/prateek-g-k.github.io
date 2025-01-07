@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Giji Harem</title>
+<style>
+.internal-space{
+	font-size: 80px;
+	text-shadow:
+    -1px -1px 0 #000000,
+    1px -1px 0 #000000,
+    -1px 1px 0 #000000,
+    1px 1px 0 #000000,  
+    -2px 0 0 #000000,
+    2px 0 0 #000000,
+    0 2px 0 #000000,
+    0 -2px 0 #000000, 
+    -2px -2px 0 #000000,
+    2px -2px 0 #000000,
+    -2px 2px 0 #000000,
+    2px 2px 0 #000000,  
+    -3px 0 0 #000000,
+    3px 0 0 #000000,
+    0 3px 0 #000000,
+    0 -3px 0 #000000; 
+}
+    .rimg{
+            border-radius: 50%;
+    }
+    .rbutton{
+            border-radius: 50%;
+            border: none;
+            background-color: transparent;
+    }
+    
+  </style>
+
+</head>
+
+<body class="bg-indigo-950 p-10">
+	 <ul>
+    <li>
+      <a href="index.html">
+        <button class="rbutton">
+                <img style="float: left; padding: 25px 0px 0px 25px" class = "rimg"
+            src="public/maifavicon.jpg" />
+        </button>
+      </a>
+      <a href="/video.html?anime=gh">
+        <h1>
+
+          <button id="myButton">giji harem</button>
+        </h1>
+      </a>
+    </li>
+  </ul>
+  <div id="container" class="w-4/5 h-4/5 mx-auto rounded-lg overflow-hidden relative group">
+    <!-- VIDEO -->
+    <figure>
+	<center>
+      <video controls id="videoplayer" class="w-full">
+        <source id="source" />
+      </video>
+	</center>
+    </figure>
+
+  </div>
+  <ul id="episodeList" class="flex flex-wrap items-center justify-center text-white">
+  </ul>
+  <script defer>
+    const e = document.getElementById("source");
+    const episodesAvailable = 11;
+    const video = document.getElementById("videoplayer");
+    var episode = new URL(document.URL).searchParams.get("ep") ?? 1;
+    const epnum = parseInt(episode) ?? 1;
+    if (epnum <= episodesAvailable) {
+      e.setAttribute("src", "gh" + episode + ".mp4")
+      console.log("gh" + episode + ".mp4")
+      video.load();
+      const list = document.getElementById("episodeList");
+      for (var i = 1; i <= episodesAvailable; i++) {
+        var newEp = document.createElement("li");
+        var newEpLink = document.createElement("a");
+        newEp.appendChild(newEpLink);
+        newEp.setAttribute("class", "p-10")
+
+        newEpLink.innerText = "Episode " + i;
+        newEpLink.setAttribute("href", "?ep=" + i);
+        list.appendChild(newEp);
+      }
+    }
+  </script>
+</body>
+
+</html>

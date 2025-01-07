@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <style>
+    input {
+      font-size: 80px;
+      text-shadow: -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px 0 #000000,
+        1px 1px 0 #000000, -2px 0 0 #000000, 2px 0 0 #000000, 0 2px 0 #000000,
+        0 -2px 0 #000000, -2px -2px 0 #000000, 2px -2px 0 #000000,
+        -2px 2px 0 #000000, 2px 2px 0 #000000, -3px 0 0 #000000,
+        3px 0 0 #000000, 0 3px 0 #000000, 0 -3px 0 #000000;
+    }
+    .rbutton{
+	    border: none;
+	    background-color: transparent;
+    }
+   li::marker{color:#181818;} 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: left
+}
+.grid-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  background-color:  #181818;
+  border-radius: 10px;
+}
+.grid{
+width: 70%;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: row;
+flex-wrap: wrap;
+row-gap: 0rem;
+column-gap: 1.5rem;
+text-decoration: none;
+
+}
+
+.item-text{
+	border-radius: 7px;
+	background-color: #313130;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+	color: white;
+	text-decoration: none;
+}
+.item-text:hover{
+	 /* background-color: #313130;  */
+	 /* color: #cd6ceb;  */
+  /* 181818 */
+   background-color: #cd6ceb; 
+}
+.nav-text{
+	padding-left: 750px;
+}
+#navbar{
+position: sticky;
+background-color: #181818;
+top: 0;
+overflow: hidden;
+border-bottom: 2px solid #313130;
+}
+  </style>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/jpg" href="/maifavicon.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Giji Harem</title>
+</head>
+
+<body>
+<div id="navbar">
+<div class = "container">
+  <ul>
+    <li>
+      <a href="index.html">
+        <button class="rbutton">
+		<img style="float: left;"
+            src="/mai_copy.png" />
+        </button>
+      </a>
+    </li>
+  </ul>
+<h3 class="nav-text"></h3>
+</div>
+</div>
+<br>
+
+<div id="container" class="w-4/5 h-4/5 mx-auto rounded-lg overflow-hidden relative group">
+  <!-- VIDEO -->
+  <figure>
+<center>
+    <video controls id="videoplayer" class="w-full">
+      <source id="source" />
+    </video>
+</center>
+  </figure>
+
+</div>
+<center>
+  <div class="grid-box">
+    <p>
+
+
+    </p>
+<div class="grid" id="epList" style="color:inherit">
+</div>
+</div>
+</center>
+
+<script defer>
+  const e = document.getElementById("source");
+  const episodesAvailable = 11;
+  const video = document.getElementById("videoplayer");
+  var episode = new URL(document.URL).searchParams.get("ep") ?? 1;
+  const epnum = parseInt(episode) ?? 1;
+  if (epnum <= episodesAvailable) {
+    e.setAttribute("src", "gh" + episode + ".mp4")
+    console.log("gh" + episode + ".mp4")
+    video.load();
+    let list = document.getElementById("epList");
+    for (var i = 1; i <= episodesAvailable; i++) {
+      let newEp = document.createElement("div");
+      let newEpLink = document.createElement("a");
+      newEp.appendChild(newEpLink);
+      newEp.classList.add("item-text");
+      newEpLink.innerText = "Episode " + i;
+      newEpLink.setAttribute("href", "?ep=" + i);
+      newEpLink.style.cssText = 'text-decoration:none; color:inherit';
+      list.appendChild(newEp);
+    }
+  }
+</script>
+</body>
+</html>
